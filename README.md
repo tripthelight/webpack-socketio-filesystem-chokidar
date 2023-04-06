@@ -31,6 +31,7 @@
 
 - src의 파일을 수정할 경우 localhost:3000에서 잘 반영됨
 - socket.io 연동함
+- html, js 파일 삭제 시, dist에 연동 안되고 있음
 
 ### 할 일
 
