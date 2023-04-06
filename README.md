@@ -20,6 +20,12 @@
   - npm i -S chokidar
   - npm i -S rimraf
 
+### 실행 순서
+
+- npm run start
+- client : http://localhost:3000
+- server : http://localhost:5000
+
 ### 현재 상황
 
 - src의 파일을 수정할 경우 localhost:3000에서 잘 반영됨
