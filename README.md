@@ -25,6 +25,7 @@
 - npm run start
 - client : http://localhost:3000
 - server : http://localhost:5000
+- 모든 수정은 client(http://localhost:3000) 에서 확인
 
 ### 현재 상황
 
