@@ -1,6 +1,6 @@
 ## webpack, express를 사용하여 gulp와 동일한 환경 세팅 시도 중
 
-### npm install
+### 1. npm install
 
 - client
   - npm i -D webpack webpack-cli
@@ -22,20 +22,20 @@
   - npm i -S chokidar
   - npm i -S rimraf
 
-### 실행 순서
+### 2. 실행 순서
 
 - npm run start
 - client : http://localhost:3000
 - server : http://localhost:5000
 - 모든 수정은 client(http://localhost:3000) 에서 확인
 
-### 현재 상황
+### 3. 현재 상황
 
 - src의 파일을 수정할 경우 localhost:3000에서 잘 반영됨
 - socket.io 연동함
 - html, js 파일 삭제 시, dist에 연동 안되고 있음
 
-### 할 일
+### 4. 할 일
 
 - server.js에서 html을 삭제할 경우, webpack.config.js의 Entrypoint에 반영이 안됨
 - 그래서 src 폴더의 index.html을 삭제해도 삭제한 index Entrypoint를 찾음
