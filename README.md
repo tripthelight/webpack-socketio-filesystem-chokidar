@@ -29,4 +29,5 @@
 
 - server.js에서 html을 삭제할 경우, webpack.config.js의 Entrypoint에 반영이 안됨
 - 그래서 src 폴더의 index.html을 삭제하도 Entrypoint를 찾음
-- 아.. X발.. 모르겠다.. 나 이거 할 수 있을까?... X발..
+- server.js의 watcher.on unlink 계속 테스트 필요
+- 할 수 있다!!
