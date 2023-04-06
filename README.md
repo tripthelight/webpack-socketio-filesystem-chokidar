@@ -18,8 +18,9 @@
   - npm i -S express
 - socket.io
   - npm i -S socket.io socket.io-client
-- file system
+- file - Create, Delete, Modify
   - npm i -S chokidar
+- clear cache
   - npm i -S rimraf
 
 ### 2. 실행 순서
