@@ -1,4 +1,4 @@
-## webpack, express를 사용하여 gulp와 동일한 환경 세팅 시도 중
+## webpack, express를 사용하여 server까지 포괄한, gulp와 동일한 환경 세팅 시도 중
 
 ### 1. npm install
 
