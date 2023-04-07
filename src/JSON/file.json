@@ -1,1 +1,4 @@
-["index", "page1", "page2"]
+{
+  "js": ["index", "page1", "page2"],
+  "html": ["test", "index", "page1", "page2"]
+}

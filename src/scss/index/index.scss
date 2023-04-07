@@ -4,3 +4,11 @@
   background-color: $color-black;
   color: $color-white;
 }
+div.ico-smile {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../images/svg/smile.svg");
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

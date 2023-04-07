@@ -9,8 +9,6 @@ const express = require("express");
 const app = express();
 // webpack
 const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackDevMiddleware = require("webpack-dev-middleware");
 const WebpackHotMiddleware = require("webpack-hot-middleware");
 const webpackConfig = require("./webpack.config.js");
@@ -88,16 +86,20 @@ app.use(
 
 /**
  * ROUTER
+ * (23-04-07) - webpack.config.js의 onBeforeSetupMiddleware로 이동함
  */
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/index.html"));
-});
-app.get("/page1", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/view/page1/page1.html"));
-});
-app.get("/page2", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/view/page2/page2.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist/index.html"));
+// });
+// app.get("/page1", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist/view/page1/page1.html"));
+// });
+// app.get("/page2", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist/view/page2/page2.html"));
+// });
+// app.get("/test", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist/view/test/test.html"));
+// });
 
 /**
  * LISTEN
@@ -126,18 +128,18 @@ watcher.on("add", (path) => {
 });
 // dist folder delete file check
 watcher.on("unlink", (_path) => {
-  if (webpackConfig.entry.hasOwnProperty(fc(_path).name)) {
-    delete webpackConfig.entry[fc(_path).name];
-  }
-  webpackConfig.plugins = webpackConfig.plugins.filter((plugin) => {
-    return (
-      plugin instanceof MiniCssExtractPlugin ||
-      (plugin instanceof HtmlWebpackPlugin &&
-        plugin.options.filename !== `${fc(_path).name}.${fc(_path).ext}`)
-    );
-  });
-  fileSystem(fc(_path).name);
-  clearWebpackCache();
+  // if (webpackConfig.entry.hasOwnProperty(fc(_path).name)) {
+  //   delete webpackConfig.entry[fc(_path).name];
+  // }
+  // webpackConfig.plugins = webpackConfig.plugins.filter((plugin) => {
+  //   return (
+  //     plugin instanceof MiniCssExtractPlugin ||
+  //     (plugin instanceof HtmlWebpackPlugin &&
+  //       plugin.options.filename !== `${fc(_path).name}.${fc(_path).ext}`)
+  //   );
+  // });
+  // fileSystem(fc(_path).name);
+  // clearWebpackCache();
   // webpack(webpackConfig, (err, stats) => {
   //   if (err || stats.hasErrors()) {
   //     console.error(err || stats.toJson().errors);

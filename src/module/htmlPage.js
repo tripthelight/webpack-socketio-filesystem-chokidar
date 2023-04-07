@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const PAGES = require("./pages.js");
 
-const multipleHtmlPlugins = PAGES.map((name) => {
+const multipleHtmlPlugins = PAGES.html.map((name) => {
   return new HtmlWebpackPlugin({
     template:
       name === "index"
